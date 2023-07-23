@@ -10,6 +10,7 @@ class Post(models.Model):
     published_date = models.DateTimeField()
     status = models.BooleanField(default=False)
     views = models.IntegerField(default=0)
+    image = models.ImageField(upload_to='appBlog/posts/images/', default='default.jpg')
 
     def __str__(self):
         return str(self.id) + '-' + self.title
