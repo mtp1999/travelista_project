@@ -113,7 +113,7 @@
                                 </div>
                                 <a class="posts-title" href="{% url 'appBlog:single' pid=post.id %}"><h3>{{ post.title }}</h3></a>
                                 <p class="excert">
-                                    {{ post.content }}
+                                    {{ post.content| truncatewords:30 }}
                                 </p>
                                 <a href="{% url 'appBlog:single' pid=post.id %}" class="primary-btn">View More</a>
                             </div>
