@@ -6,8 +6,12 @@ from django.conf.urls.static import static
 app_name = 'appBlog'
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('<int:pid>/', views.single, name='single'),
+    path('', views.home_view, name='home'),
+    path('posts/', views.post_list_view, name='post_list'),
+    path('posts/category/<str:category>/', views.post_list_view, name='post_list_category'),
+    path('posts/author/<str:author>/', views.post_list_view, name='post_list_author'),
+
+    path('posts/<int:pid>/', views.single_post_view, name='single'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

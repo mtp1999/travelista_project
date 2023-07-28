@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from appBlog.models import Post
 from django.utils import timezone
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 """
 use admin by:
@@ -9,18 +10,34 @@ password: admin1
 """
 
 
-def home(request):
-
-    date_time_now = timezone.now()
-    posts = Post.objects.filter(published_date__lte=date_time_now, status=1)
-
-    context = {
-        'posts': posts,
-    }
-    return render(request, 'appBlog/blog-home.html', context)
+def home_view(request):
+    return render(request, 'appBlog/index.html')
 
 
-def single(request, pid):
+def post_list_view(request, **kwargs):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), status=1).order_by('-published_date')
+
+    if s := request.GET.get('search'):
+        posts = posts.filter(title__contains=s)
+    if a := kwargs.get('author'):
+        posts = posts.filter(author__username=a)
+    if c := kwargs.get('category'):
+        posts = posts.filter(categories__name=c)
+
+    posts = Paginator(posts, 2)
+    page_number = request.GET.get('page', 1)
+    try:
+        posts = posts.page(page_number)
+    except PageNotAnInteger:
+        return redirect('appBlog:post_list')
+    except EmptyPage:
+        return redirect('appBlog:post_list')
+
+    context = {'posts': posts}
+    return render(request, 'appBlog/blog-post-list.html', context)
+
+
+def single_post_view(request, pid):
     post_id_list = [post.id for post in Post.objects.all().filter(status=1)]
     post_id_list.sort()
     post = Post.objects.get(id=pid)
