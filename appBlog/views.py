@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from appBlog.models import Post
 from django.utils import timezone
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from appBlog.forms import ContactForm
+from django.contrib import messages
 
 """
 use admin by:
@@ -62,3 +64,21 @@ def single_post_view(request, pid):
         'next_post': next_post
     }
     return render(request, 'appBlog/blog-single.html', context)
+
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        form.name = 'Anonymous'
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'message saved.')
+            return redirect('appBlog:home')
+        else:
+            messages.error(request, form.errors)
+            return redirect('appBlog:contact')
+    return render(request, 'appBlog/contact.html')
+
+
+def about_view(request):
+    return render(request, 'appBlog/about.html')

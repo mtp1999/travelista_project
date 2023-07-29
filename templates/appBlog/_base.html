@@ -54,36 +54,40 @@
             <div class="container main-menu">
                 <div class="row align-items-center justify-content-between d-flex">
                   <div id="logo">
-                    <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
+                    <a href="{% url 'appBlog:home' %}"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
                   </div>
                   <nav id="nav-menu-container">
                     <ul class="nav-menu">
                       <li><a href="{% url 'appBlog:home' %}">Home</a></li>
                       <li><a href="{% url 'appBlog:post_list' %}">Posts</a></li>
-                      <li><a href="#">About</a></li>
-{#                      <li class="menu-has-children"><a href="">Blog</a>#}
-{#                        <ul>#}
-{#                          <li><a href="blog-post-list.html">Blog Home</a></li>#}
-{#                          <li><a href="blog-single.html">Blog Single</a></li>#}
-{#                        </ul>#}
-{#                      </li>#}
-{#                      <li class="menu-has-children"><a href="">Pages</a>#}
-{#                        <ul>#}
-{#                              <li><a href="#">Elements</a></li>#}
-{#                              <li class="menu-has-children"><a href="">Level 2 </a>#}
-{#                                <ul>#}
-{#                                  <li><a href="#">Item One</a></li>#}
-{#                                  <li><a href="#">Item Two</a></li>#}
-{#                                </ul>#}
-{#                              </li>#}
-{#                        </ul>#}
-{#                      </li>#}
-                      <li><a href="#">Contact</a></li>
+                      <li><a href="{% url 'appBlog:about' %}">About</a></li>
+                      <li><a href="{% url 'appBlog:contact' %}">Contact</a></li>
+
                     </ul>
                   </nav><!-- #nav-menu-container -->
                 </div>
             </div>
         </header><!-- #header -->
+
+        <!-- Modal -->
+        {% if messages %}
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            {% for m in messages %}
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body {{ m.tags }}">
+                  <p>{{ m }}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            {% endfor %}
+
+            </div>
+          </div>
+        {% endif %}
 
         {% block content %}
         {% endblock %}
@@ -173,6 +177,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </footer>
         <!-- End footer Area -->
 
+
         <script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
         <script src="{% static "js/popper.min.js" %}"></script>
         <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
@@ -187,5 +192,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="{% static "js/owl.carousel.min.js" %}"></script>
         <script src="{% static "js/mail-script.js" %}"></script>
         <script src="{% static "js/main.js" %}"></script>
+
+        {% block modal_show %}
+        {% endblock %}
+
+        {% if messages %}
+            <script>
+                var myModal = new bootstrap.Modal(document.getElementById('myModal'), {})
+                myModal.toggle()
+            </script>
+        {% endif %}
+
     </body>
 </html>
