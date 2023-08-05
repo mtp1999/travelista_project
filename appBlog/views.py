@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
+
 from appBlog.models import Post
 from django.utils import timezone
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from appBlog.forms import ContactForm
+from appBlog.forms import ContactForm, CommentForm
 from django.contrib import messages
 
 """
@@ -25,8 +27,10 @@ def post_list_view(request, **kwargs):
         posts = posts.filter(author__username=a)
     if c := kwargs.get('category'):
         posts = posts.filter(categories__name=c)
+    if t := kwargs.get('tag'):
+        posts = posts.filter(tags__name__icontains=t)
 
-    posts = Paginator(posts, 2)
+    posts = Paginator(posts, 3)
     page_number = request.GET.get('page', 1)
     try:
         posts = posts.page(page_number)
@@ -40,9 +44,19 @@ def post_list_view(request, **kwargs):
 
 
 def single_post_view(request, pid):
-    post_id_list = [post.id for post in Post.objects.all().filter(status=1)]
-    post_id_list.sort()
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Comment Saved.')
+            return redirect('appBlog:single', pid=pid)
+        else:
+            messages.error(request, form.errors)
+            return redirect('appBlog:home')
+
+    post_id_list = [post.id for post in Post.objects.all().filter(status=1).order_by('id')]
     post = Post.objects.get(id=pid)
+    comments = post.comment_set.filter(allowed=True)
     try:
         next_post = Post.objects.get(id=post_id_list[post_id_list.index(pid)+1])
     except:
@@ -61,7 +75,8 @@ def single_post_view(request, pid):
     context = {
         'post': post,
         'previous_post': previous_post,
-        'next_post': next_post
+        'next_post': next_post,
+        'comments': comments
     }
     return render(request, 'appBlog/blog-single.html', context)
 
@@ -77,7 +92,10 @@ def contact_view(request):
         else:
             messages.error(request, form.errors)
             return redirect('appBlog:contact')
-    return render(request, 'appBlog/contact.html')
+
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'appBlog/contact.html', context)
 
 
 def about_view(request):
