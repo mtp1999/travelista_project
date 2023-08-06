@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+
+from django.conf.global_settings import LOGOUT_REDIRECT_URL
 from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -49,7 +51,8 @@ INSTALLED_APPS = [
     'django_summernote',
     'captcha',
 
-    'appBlog'
+    'appBlog',
+    'appAccount',
 ]
 
 
@@ -171,4 +174,20 @@ SUMMERNOTE_THEME = 'bs4'  # Show summernote with Bootstrap4
 MULTI_CAPTCHA_ADMIN = {
     'engine': 'simple-captcha',
 }
+
+
+# using this in development mode
+# we use smtp service in production mode
+# if DEBUG:
+#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+
+LOGIN_REDIRECT_URL = '/'
 

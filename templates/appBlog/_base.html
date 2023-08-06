@@ -36,8 +36,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-sm-6 col-6 header-top-left">
                         <ul>
+                            {% if request.user.is_authenticated %}
+                                <li><a href="#">{{ request.user.username }}</a></li>
+                            {% else %}
+
                             <li><a href="#">Visit Us</a></li>
                             <li><a href="#">Buy Tickets</a></li>
+
+                            {% endif %}
                         </ul>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-6 header-top-right">
@@ -62,6 +68,12 @@
                       <li><a href="{% url 'appBlog:post_list' %}">Posts</a></li>
                       <li><a href="{% url 'appBlog:about' %}">About</a></li>
                       <li><a href="{% url 'appBlog:contact' %}">Contact</a></li>
+                        {% if request.user.is_authenticated %}
+                            <li><a href="{% url 'appAccount:logout' %}">Logout</a></li>
+                        {% else %}
+                            <li><a href="{% url 'appAccount:login' %}">Login</a></li>
+                            <li><a href="{% url 'appAccount:signup' %}">Sign Up</a></li>
+                        {% endif %}
 
                     </ul>
                   </nav><!-- #nav-menu-container -->
@@ -193,8 +205,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="{% static "js/mail-script.js" %}"></script>
         <script src="{% static "js/main.js" %}"></script>
 
-        {% block modal_show %}
-        {% endblock %}
 
         {% if messages %}
             <script>
