@@ -1,0 +1,116 @@
+What Is On-Page SEO & Why Is It Important?
+On-page SEO, which is sometimes called on-site SEO, is the process of tweaking a page’s content, tags,
+and internal links to improve search visibility and increase traffic.
+In other words, it’s a means of optimizing your website to help search engines better understand your website.
+
+12 Essential On-Page SEO Factors
+On-page SEO can be broadly divided into three categories: content, HTML, and website architecture.
+We’ll look at each individually.
+
+Content
+You’ve heard it before: Content is king.
+SEO without it is like a beautiful new sports car without an engine – it might look nice,
+but it’s going nowhere. But, not all content is not created equal.
+Here are the content factors you need to consider to maximize your on-site SEO:
+
+1. E-A-T
+One way Google weights your site is based on E-A-T, or expertise, authoritativeness, and trustworthiness.
+
+2. Keywords
+The most basic way to tell them your website’s content answers a user’s question is in the language you use.
+Pages that feature the keywords used in a query, whether in the body, headings, or both,
+are more likely to be relevant to the search.
+
+3. SEO Writing
+Creating the type of content that both prioritizes search engines and converts human visitors to your
+site is something of an art.
+Unless you’ve done it before, it can be quite challenging to write copy that reads well and still
+adheres to SEO best practices.
+
+We have an entire piece dedicated to helping you master the art, but some of the key takeaways include:
+--Emphasize readability: Your content should be easily scannable, so users can quickly find the
+information they’re looking for.
+--Don’t overuse keywords: Also known as keyword stuffing, this technique was used in the past by
+unscrupulous SEO professionals to game the system, Google takes a dim view of sites that overuse keywords.
+If you’re caught doing this, your page could be demoted in SERPs or even removed altogether.
+--Keep sentences and paragraphs brief: If you’ve ever clicked on a webpage only to be assaulted by an unbroken wall
+of text, you know how hard it is to read lengthy pieces of copy.
+Avoid driving users away by keeping your sentences and paragraphs short.
+--Use subheadings: Subheads stand out because of their size, attracting attention from people who are scanning
+your page. Use an ample amount in your content to guide readers down the page.
+--Use bulleted lists: This may feel very meta, but bulleted lists are a good way to break
+information down into easily digestible chunks. Use them whenever they make sense.
+
+
+4. Visual Assets
+Using images, videos, and infographics do more than making your page visually interesting to visitors.
+It also gives you opportunities to boost your SEO.
+
+
+5. Title Tags
+This is one of those areas where it’s important to focus on the details.
+On its own, this snippet of code that allows you to give a webpage a title probably isn’t going to
+have you shooting up SERP rankings.
+But in context with other on-page elements (like the ones discussed here), it can help you build
+context and demonstrate your site’s relevancy.
+
+6. Meta Description
+Better meta descriptions give searchers a better understanding of what your page is all about,
+which in turn leads to more clickthroughs. So, don’t neglect them.
+
+7. Image Optimization
+We already briefly touched on the importance of visual assets on your page, but now it’s time to look
+more closely at their technical aspects.
+
+Here are some tips to help optimize yours:
+--Include SEO-friendly alt tags.
+--Choose the right format and file size for fast loading.
+--Customize file names instead of using something like IMG_08759.
+--Ensure your images are mobile-friendly.
+
+8. Geotagging (For Local Search)
+It may be a global economy, but most business is still done at a local level. Connect with the people
+in your neighborhood by optimizing your on-page local SEO.
+While this is less important for mega-corporations like GMC or Pepsi, for small- and medium-sized
+businesses, this is their bread and butter.
+
+There are three main SEO tactics to consider when focusing on local traffic:
+--Optimizing local listings and citations including name, address, and phone number (NAP),
+website URL, and business descriptions, using third-party apps, and getting reviews.
+--Optimizing your local content, including accommodating for “near me” searches, providing
+location-based content, or buying a local website or blog.
+--Optimizing and building links with other local businesses and organizations.
+
+Be sure to include the name of your target location in your keywords and put them in your content wherever they fit.
+
+9. Site Speed
+A clunky, slow-loading site does more than frustrate and drive away visitors it actually hurts your search ranking too.
+
+Search Engine Journal took a deep dive into the effect a page’s loading time has on SEO and confirmed page
+speed is a ranking factor in search results.
+
+10. Responsive Design
+In 2016, mobile search volume surpassed desktop for the very first time. And in the years following,
+that number has only grown.
+Because more users are on mobile devices, Google followed the logical path and began to prioritize sites with responsive designs in mobile search rankings.
+
+This mobile-friendly update only impacts search results performed on mobile devices,
+and while it’s still possible to rank in these results without responsive design, Google strongly recommends
+sites have a mobile version.
+
+11. URL Structure
+There was a time when URLs played a large role in SEO. Professionals would make sure their keywords were included
+in web addresses to help them rank higher.
+But Google, doing what Google does, changed the algorithm. And what was once so important to rankings,
+now plays a much smaller role.
+
+That’s not to say it doesn’t matter. Search engines are still including your URLs in your overall score
+they just don’t hold the same prominence they once did.
+
+However, there is evidence they play a role in a site’s initial ranking,
+and some professionals believe they’re used to group pages.
+What this means is, that while they shouldn’t be your top SEO priority, you don’t want to ignore them either.
+
+12. Links
+One of the best ways your website can establish expertise, authoritativeness, and trustworthiness
+is through links from other reputable websites.

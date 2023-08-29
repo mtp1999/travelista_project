@@ -1,0 +1,90 @@
+1. Use Header Tags To Provide Structure
+Your header tags provide structure and context for your article.
+Each header should give the reader an idea of the information they can glean from the paragraph text that follows below.
+
+A helpful way to think of header tags is by comparing them to a table of contents for a non-fiction book:
+
+--Your H1 introduces the topic your page is all about, just as a title tells a reader what a book is all about.
+--The H2s are akin to book chapters, describing the main topics you’ll cover in sections of the article.
+Subsequent headers, H3s to H6s, serve as additional subheadings within each section,
+just as a book chapter may be split up into multiple subtopics.
+
+When drafting a blog article or landing page, think about the main ideas you want your visitors to come away with.
+
+2. Break Up Blocks Of Text With Subheadings
+A scannable article is a readable article, and a readable article is one that’s more likely to
+perform well in the search engines.
+
+That’s because Google likes to reward content that’s user-friendly.
+Content that’s easy to read is, by definition, more user-friendly than content that isn’t.
+
+When an article is scannable, users might actually stick around to read it,
+instead of bouncing back to Google. Plus, they’ll also be more likely to share it with their friends.
+
+While social signals aren’t a direct ranking factor, the more an article is shared,
+the more likely it is to naturally earn backlinks, which are a ranking factor.
+
+3. Include Keywords In Your Header Tags
+As Mueller told us, Google uses header tags to gather context for your page.
+As with anything Google pays attention to, that means it’s worth including keywords in your header tags.
+This does not mean you should shoehorn keywords in at all costs. Be judicious, not spammy.
+You’ve probably noticed that many of the header tags in this article contain keywords.
+In fact, the H2 for this section literally includes “keywords!” But,
+the keyword I’m actually referring to is “header tags.”
+
+That’s one of the target keywords for this article, so I’ve included it in many of the H2s.
+I haven’t included it in every single H2, though, because that kind of repetition can turn off readers.
+
+Your page should be readable, first and foremost.
+If keywords fit naturally, then you can go ahead and include them, as well.
+
+Always think of your user first. Then, optimize for Google.
+
+4. Optimize For Featured Snippets
+Sadly, header tags are an afterthought for many marketers (here’s hoping this article changes that!).
+But they can make a sizable impact on your chances of scoring a coveted featured snippet.
+
+5. Only Use One H1
+Let’s dispel a common SEO myth.
+Google has said there is no problem with using multiple H1s.
+However, that doesn’t mean it’s an SEO best practice to use multiple H1s on a page.
+Why not?
+H1s are big, and they look like titles to readers. Use multiple H1s on your page,
+and it starts to look a little out of control.
+Want to make sure you don’t have any multiple H1s lingering on your site?
+Run your domain through a crawler tool like Screaming Frog.
+Toggle over to the H1 tab to see at a glance whether you have any pages that are missing
+H1s entirely or have multiple H1s.
+
+6. Keep Your Header Tags Consistent
+In marketing and in design, your goal is to maintain a consistent experience for users.
+When a site achieves that down to the finest detail, it’s impressive.
+Aim to impress with consistent header tags on your site.
+If you choose to use title case format, stick with that across all your pages
+(and vice versa if you choose sentence case).
+Also, keep your headings on the shorter side.
+A header tag is not the place to write a paragraph of keyword-rich text for Google.
+Instead, treat it like a mini-title for the following section of text.
+A good rule of thumb is to keep your headers about the same length as your title tags (70 characters or less).
+
+The more you can set expectations for your site visitors and consistently meet them,
+the happier (and more engaged) they’ll be.
+
+7. Make Your Header Tags Interesting
+This rule applies to all your copywriting, not just the headers.
+Your initial draft may have bland headers that you use to create your outline.
+That’s okay, but you should always review and revise your headers prior to publishing to
+make them compelling for your visitors.
+Yes, your header tags make an article scannable.
+But ideally, they don’t scan the whole way through.
+Intriguing header tags encourage visitors to take a beat and read for a while.
+Place special importance on your H1 tag in particular. Users notice H1s.
+In large part, your H1 may dictate whether visitors bother to scroll down the page at all.
+Do your best to write one awesome H1 tag that answers the user’s search intent and gets them
+excited about reading your article.
+
+Stay Ahead With Header Tags
+Write your headers well, and you’ll not only make your content more scannable, you’ll intrigue visitors to keep reading.
+Plus, optimized header tags can help you win featured snippets and make it easier for search engines to
+understand your page.
+Be an SEO all-star. Get strategic with your header tags. Your site deserves it!

@@ -100,3 +100,7 @@ def contact_view(request):
 
 def about_view(request):
     return render(request, 'appBlog/about.html')
+
+
+def accessible_soon_view(request):
+    return render(request, 'appBlog/accessible_soon.html')

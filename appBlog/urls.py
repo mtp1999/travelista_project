@@ -15,6 +15,7 @@ urlpatterns = [
     path('contact/', views.contact_view, name='contact'),
     path('about/', views.about_view, name='about'),
     path('rss/feed/', LatestEntriesFeed()),
+    path('accessible_soon/', views.accessible_soon_view, name='accessible_soon'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
