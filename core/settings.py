@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'taggit',
     'django_summernote',
     'captcha',
+    'compressor',
 
     'appBlog',
     'appAccount',
@@ -168,4 +169,11 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 
 LOGIN_REDIRECT_URL = '/'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
 
